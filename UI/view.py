@@ -24,7 +24,7 @@ class View(ft.UserControl):
         self._title = ft.Text("Appello straordinario del 10/11/2025", color="blue", size=24)
         self._page.controls.append(self._title)
 
-        self._ddStore = ft.Dropdown(label="Store", width=250)
+        self._ddStore = ft.Dropdown(label="Store", width=250, options=self._controller.readStores())
         self._txtIntK = ft.TextField(label="K", width=100)
         self._ddNode = ft.Dropdown(label="Node", width=150, disabled=True)
 
